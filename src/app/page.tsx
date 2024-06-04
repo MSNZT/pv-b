@@ -1,10 +1,12 @@
-import {Button} from "@/shared/ui/button";
+import {CreateCoursesForm} from "@/features/pub/createCoursesForm";
+import {CoursesList} from "@/features/pub/coursesList";
 
 export default function Home() {
+	
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-24">
-			<Button>Кнопка</Button>
-			<div>Hello World!</div>
+		<main className="p-4">
+			<CreateCoursesForm className="mb-4" revalidatePagePath='/' />
+			<CoursesList revalidatePagePath='/' />
 		</main>
 	);
 }
