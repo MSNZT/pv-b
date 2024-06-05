@@ -30,4 +30,4 @@ jobs:
           username: ${{ secrets.PROD_SSH_USERNAME }}
           key: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
           fingerprint: ${{ secrets.PROD_SSH_FINGERPRINT }}
-          script: source ~/deploy.sh; echo 'Hello World'
+          script: source ~/.nvm/nvm.sh; ~/deploy.sh; echo 'Hello World'
