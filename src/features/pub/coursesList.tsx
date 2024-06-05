@@ -20,7 +20,7 @@ export const CoursesList = async (
 				<CourseItem
 					key={course.id}
 					course={course}
-					onDelete={() => handleDeleteAction(course.id)}
+					onDelete={handleDeleteAction.bind(null, course.id)}
 					className='mb-4'
 				/>
 			)}
