@@ -24,10 +24,10 @@ jobs:
       cancel-in-progress: true
     steps:
       - name: SSH Command
-        uses: appleboy/ssh-action@v1.0.3
+        uses: D3rHase/ssh-command-action@v0.2.2
         with:
           host: ${{ secrets.PROD_SSH_HOST }}
-          username: ${{ secrets.PROD_SSH_USERNAME }}
-          key: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
-          fingerprint: ${{ secrets.PROD_SSH_FINGERPRINT }}
-          script: source ~/.nvm/nvm.sh; ~/deploy.sh; echo 'Hello World'
+          user: ${{ secrets.PROD_SSH_USERNAME }}
+          private_key: ${{ secrets.PROD_SSH_PRIVATE_KEY }}
+          host_fingerprint: ${{ secrets.PROD_SSH_FINGERPRINT }}
+          command: source ~/.nvm/nvm.sh; ~/deploy.sh; echo 'Hello World'
