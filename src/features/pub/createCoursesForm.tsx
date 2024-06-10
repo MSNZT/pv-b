@@ -60,7 +60,7 @@ export const CreateCoursesForm = (
 						</FormItem>
 					)}
 				/>
-				<Button disabled={isCreateTransition} type='submit' className='mt-4'>Добавить</Button>
+				<Button disabled={isCreateTransition} type='submit' className='mt-4'>ДОБАВИТЬ</Button>
 			</form>
 		</Form>
 	)
